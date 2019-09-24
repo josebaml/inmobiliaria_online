@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import 'variables';
+@import 'mixins';
+
+/*** General ***/
+body{
+    background-color: $gris;
+    font-family: 'Roboto';
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4 {
+    font-weight: 300;
+    margin: 1rem 0 1rem 0;
+}
+h1 {
+    font-size: 2.4rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+/*** Header ***/
+.header{
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: $primario;
+    &__bar{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        text-align: center;
+        @include media(sm){
+            grid-template-rows: unset;
+            grid-template-columns: 30% 1fr 40%;
+        }
+    }
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    color: $claro;
+    margin-top: 1rem;
+    @include media(xs){
+       padding: 0 2rem;
+       justify-content: space-around;
+    }
+    @include media(sm){
+        grid-column: 3 / -1;
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+/*** sección nosotros ***/
+.we{
+    text-align: center;
+    margin-top: 2rem;
+    @include media(sm){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.content-us{
+    padding: 1rem 1.5rem;
+    @include media(sm){
+        padding: 0 1.5rem;
+    }
+    &__title{
+        @include media(sm){
+            margin-top: 0;
+        }
+    }
+}
+
+/*** Venta ***/
+.sales{
+    margin-top: 2rem;
+    text-align: center;
+    &__title{
+        margin: 2rem 0;
+    }
+}
+.houses{
+    @include media(xs){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(md){
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.commercial{
+    margin: 0 1rem 1rem 1rem;
+    &__card{
+        background-color: $claro;
+        padding: 1rem;
+        border: 1px solid rgb(199, 199, 199)
+    }
+    &__description, &__price{
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+    &__price{
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1rem;
+    }
+    &__span{
+        font-weight: 300;
+        color: $primario;   
+    }
+}
+.button{
+    background-color: $primario;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: $claro;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    border: 1px solid $primario;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    &:hover{
+        background-color: $claro;
+        color: $primario;
+    }
+}
+
+/*** Footer ***/
+.footer{
+    background-color: $primario;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    color: $claro;
+    text-align: center;
+}

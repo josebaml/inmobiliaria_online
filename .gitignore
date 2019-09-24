@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+
+# rutagithub.txt
+rutagithub.txt
+
+# Dependency directory
+node_modules
+bower_components
+dist
+nadia GV

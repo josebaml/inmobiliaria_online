@@ -30,10 +30,19 @@ h2 {
 h3 {
     font-size: 2rem;
 }
-
 /*** Header ***/
+.background {
+    min-height: 100vh;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero{
+    background: url("../img/hero.jpg") no-repeat center;
+    background-size: cover;
+}
 .header{
-    margin-top: 2rem;
     padding: 1rem;
     background-color: $primario;
     &__bar{
@@ -78,6 +87,7 @@ h3 {
         padding: 0 1.5rem;
     }
     &__title{
+        font-size: 1.5rem;
         @include media(sm){
             margin-top: 0;
         }
@@ -145,8 +155,8 @@ h3 {
 /*** Footer ***/
 .footer{
     background-color: $primario;
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-bottom: 1rem;
+    padding: .5rem;
     color: $claro;
     text-align: center;
 }

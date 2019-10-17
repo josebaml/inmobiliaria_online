@@ -31,7 +31,19 @@ h2 {
     font-size: 2.2rem;
 }
 h3 {
+    font-size: 1.7rem;
+}
+.we, .houses, .contact{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.sales__title, .contact__title{
+  margin: 2rem 0 1.5rem 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  @include media(md){
     font-size: 2rem;
+  }
 }
 /*** Header ***/
 .background {
@@ -60,7 +72,7 @@ h3 {
         @include media(md){
             grid-template-columns: 30% 1fr 45%;
         }
-        @include media(md){
+        @include media(lg){
             grid-template-columns: 30% 1fr 40%;
         }
     }
@@ -70,19 +82,27 @@ h3 {
     justify-content: space-between;
     color: $claro;
     margin-top: 1rem;
+    text-transform: uppercase;
+    font-size: .9rem;
     @include media(xs){
        padding: 0 2rem;
        justify-content: space-around;
-       font-size: 1.1rem;
+       font-size: 1rem;
     }
     @include media(sm){
         grid-column: 3 / -1;
         padding: 0;
         margin-top: 0;
+        font-size: 1.1rem;
+    }
+    @include media(md){
         font-size: 1.2rem;
     }
-    @include media(sm){
-        font-size: 1.3rem;
+    &__a{
+        transition: color .3s ease-in-out;
+        &:hover{
+          color: $negro;
+        }
     }
 }
 
@@ -119,10 +139,11 @@ h3 {
         padding: 2rem;
     }
     &__title{
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-top: 1.5rem;
+        text-transform: uppercase;
         @include media(sm){
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
@@ -140,9 +161,6 @@ h3 {
 .sales{
     margin-top: 2rem;
     text-align: center;
-    &__title{
-        margin: 2rem 0;
-    }
 }
 .houses{
     @include media(xs){
@@ -165,7 +183,7 @@ h3 {
         line-height: 1.6rem;
     }
     &__price{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 400;
         padding: 1rem;
     }
@@ -180,7 +198,7 @@ h3 {
     padding: 1rem;
     text-align: center;
     color: $claro;
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-transform: uppercase;
     border: 1px solid $primario;
     transition: all .5s ease-in-out;
@@ -195,11 +213,24 @@ h3 {
 }
 
 /*** Contact ***/
+.contact{
+    text-align: center;
+    &__text{
+        max-width: 90%;
+        margin: 0 auto;
+        @include media(sm){
+            max-width: 80%;
+        }
+        @include media(xlg){
+            max-width: 70%;
+        }
+    }
+}
 .form{
     max-width: 90%;
-    margin: 0 auto;
+    margin: 2rem auto;
     @include media(sm){
-    max-width: 70%;
+        max-width: 70%;
     }
     @include media(md){
         max-width: 60%;
@@ -213,8 +244,9 @@ h3 {
     &__item{
       margin-bottom: 1em;
       border: 1px solid $primario;
+      font-size: 1.2rem;
       width:100%;
-      padding: 1rem .8em;
+      padding: .8em;
       box-sizing: border-box;
       border-radius: 2px;
       color: $primario;
@@ -234,16 +266,24 @@ h3 {
       &:hover{
         background: $claro;
         color: $primario;
-        box-shadow: inset 0 0 2.5px $primario;
+        box-shadow: inset 0 0 1.3px $primario;
         border: 1px solid $primario;  
       }
     }
   }
+
 /*** Footer ***/
 .footer{
     background-color: $primario;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     padding: .5rem;
     color: $claro;
     text-align: center;
+    &__email--color{
+        transition: color .4s ease-in-out;
+        &:hover{
+            color: $negro;
+        }
+    }
 }
